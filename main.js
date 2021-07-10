@@ -1,5 +1,6 @@
 const content = document.getElementById('content');
 const contentParent = content.parentNode;
+contentParent.classList.add('parent');
 
 console.log("contentParents",contentParent)
 content.parentNode.removeChild(content);
@@ -20,16 +21,18 @@ $.ajax({
     }
   });
 
-  //function to generate a random number
+//function to generate a random number
   function getRandomArbitrary(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;//math.random generates a number from 0-(max - min); then add 3 to offest numbers less than min; and use math.floor to get whole integers
+    return Math.floor(Math.random() * (max - min)) + min;//math random method generates a number from 0-(max - min); then add 3 to offest numbers less than min; and use math floor metod to get whole integers
   }
 
+ //Append picture to ContentParent 
 const image = document.createElement('img');
 let randomNum = getRandomArbitrary(1, 100);
 image.src = `https://unsplash.it/1200/800?image=${randomNum}`; //random number serves as random image id from the source array/object
 contentParent.appendChild(image);
 
+//Create function to load alert messages after clicking on page
 contentParent.onclick = function() {
     const arr = [];
     arr[0] = 'It\'s not what you think you are that holds you back, it\'s what you think you are not. Denis Waitely'
