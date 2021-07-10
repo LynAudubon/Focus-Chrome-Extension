@@ -6,6 +6,7 @@ content.parentNode.removeChild(content);
 
 const header = document.createElement('HEADER');
 header.innerHTML = 'Get back to achieving your coding dreams';
+header.classList.add('beautText');
 contentParent.appendChild(header);
 
 const image = document.createElement('img');

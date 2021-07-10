@@ -2,11 +2,12 @@
   "manifest_version": 2,
   "name": "Focus",
   "version": "1.0",
-  "description": "I don't have enougn time to code, Youtube!!!",
+  "description": "I don't have enough time to code, Youtube!!!",
   "content_scripts": [
       {
           "matches": ["https://www.youtube.com/*"],
-          "js": ["jquery.min.js", "./main.js"]
+          "js": ["jquery.min.js", "./main.js"],
+          "css":["index.css"]
       }
   ]
 }
